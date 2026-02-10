@@ -6,18 +6,15 @@
   padding: 0;
 }
 
-
-
-
-body {
-
+html, body {
   margin: 0;
   padding: 0;
-  height: 100%; /* ensures vh works properly */
+  height: 100%;
   width: 100%;
-  overflow-x: hidden;
-  /* overflow-y: hidden; */
+}
 
+a {
+  text-decoration: none;
 }
 
 @keyframes animateDown {
