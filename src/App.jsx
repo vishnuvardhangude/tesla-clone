@@ -12,8 +12,7 @@ function App() {
     <>
       <div className='App'>
         {/* <Header /> */}
-        {/* <Home /> */}
-        <Section />
+        <Home />
       </div>
     </>
   )

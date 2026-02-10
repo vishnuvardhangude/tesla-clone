@@ -5,7 +5,63 @@ import Section from './Section';
 function Home() {
   return (
     <Container>
-      <Section />
+      <Section 
+        title="Model S"
+        description="Order Online for Touchless Delivery"
+        bkgImg="model-s.jpg"
+        leftbtnTxt="Custom Order"
+        rightbtnTxt="Existing Inventory"
+      />
+      <Section 
+        title="Model Y"
+        description="Order Online for Touchless Delivery"
+        bkgImg="model-y.jpg"
+        leftbtnTxt="Custom Order"
+        rightbtnTxt="Existing Inventory"
+      />
+      <Section 
+        title="Model 3"
+        description="Order Online for Touchless Delivery"
+        bkgImg="model-3.jpg"
+        leftbtnTxt="Custom Order"
+        rightbtnTxt="Existing Inventory"
+      />
+      <Section 
+        title="Model X"
+        description="Order Online for Touchless Delivery"
+        bkgImg="model-x.jpg"
+        leftbtnTxt="Custom Order"
+        rightbtnTxt="Existing Inventory"
+        // isLast={true}
+      />
+
+      <Section 
+        title="Lowest Cost Solar Panels in America"
+        description="Money-back gaurentee"
+        bkgImg="solar-panel.jpg"
+        leftbtnTxt="Order now"
+        rightbtnTxt="Learn More"
+        // isLast={true}
+      />
+      <Section 
+        title="Solar for New Roofs"
+        description="Solar Roof Costs Less Than a New Roof Plus Solar Panels"
+        bkgImg="solar-roof.jpg"
+        leftbtnTxt="Order now"
+        rightbtnTxt="Learn More"
+        // isLast={true}
+      />
+
+      <Section 
+        title="Accessories"
+        // description="Solar Roof Costs Less Than a New Roof Plus Solar Panels"
+        bkgImg="accessories.jpg"
+        leftbtnTxt="Shop now"
+        // rightbtnTxt="Learn More"
+        isLast={true}
+      />
+      
+
     </Container>
   )
 }
