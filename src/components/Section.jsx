@@ -1,27 +1,58 @@
 import React from 'react'
 import styled from 'styled-components';
+import {motion, useScroll} from "framer-motion";
+import { useState, useEffect } from "react";
+
 
 function Section(props) {
 
-        //   title="Model S"
-        // description="Order Online for Touchless Delivery"
-        // bkgImg="model-s.jpg"
-        // leftbtnTxt="Custom Order"
-        // rightbtnTxt="Existing Inventory"
+  const { scrollY } = useScroll();
+  console.log(scrollY);
+  const [lastScroll, setLastScroll] = useState(0);
+  // console.log(lastScroll, setLastScroll);
+  const [direction, setDirection] = useState("down");
+  // console.log(direction, setDirection);
+
+  // Modern scroll direction detection
+  useEffect(() => {
+    return scrollY.onChange((latest) => {
+      setDirection(latest > lastScroll ? "down" : "up");
+      setLastScroll(latest);
+    });
+  }, [lastScroll, scrollY]);
+
+  const yOffset = direction === "down" ? -50 : 50;
+  
 
   return (
     <Wrap bgImage={props.bkgImg}>
       <ItemText>
-        <h1>{props.title}</h1>
-        <p>{props.description}</p>
+        <motion.div
+          initial={{ opacity: 0, y: yOffset }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }} // amount = fraction of element visible
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          <h1>{props.title}</h1>
+          <p>{props.description}</p>
+
+        </motion.div>
       </ItemText>
       <Buttons>
+        <motion.div
+          initial={{ opacity: 0, y: yOffset }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }} // amount = fraction of element visible
+          transition={{ duration: 1, ease: "easeOut", delay:0.3}}
+        >
       <ButtonGroup>
+        
         <LeftButton>{props.leftbtnTxt}</LeftButton>
         {props.rightbtnTxt && 
           <RightButton>{props.rightbtnTxt}</RightButton> 
         }
       </ButtonGroup>
+      </motion.div>
       {!props.isLast && <DownArrow src="/images/down-arrow.svg" />}
       </Buttons>
     </Wrap>
