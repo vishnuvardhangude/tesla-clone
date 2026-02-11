@@ -2,9 +2,11 @@
 
 A Tesla website clone built using **React**, **Styled Components**, and **Framer Motion**.
 
+live demo: https://tesla-clone-test.netlify.app/
+
 ---
 
-live demo: https://tesla-clone-test.netlify.app/
+
 
 --
 ## 🚀 Features
