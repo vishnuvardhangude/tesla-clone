@@ -6,9 +6,6 @@ live demo: https://tesla-clone-test.netlify.app/
 
 ---
 
-
-
---
 ## 🚀 Features
 - Full-screen sections
 - Smooth scroll animations
