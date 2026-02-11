@@ -30,15 +30,16 @@ function Header() {
             <CloseWrapper>
               <CustomClose onClick={ () => setBurgerStatus(false)} />
             </CloseWrapper>
+            <li> <a href="#">Model S</a></li>
+            <li> <a href="#">Model 3</a></li>
+            <li> <a href="#">Model X</a></li>
+            <li> <a href="#">Model Y</a></li>
             <li> <a href="#">Existing Inventory</a></li>
             <li> <a href="#">Used Inventory</a></li>
             <li> <a href="#">Trade-In</a></li>
             <li> <a href="#">Cyber Truck</a></li>
             <li> <a href="#">Roadster</a></li>
             <li> <a href="#">Semi</a></li>
-            <li> <a href="#">Existing Inventory</a></li>
-            <li> <a href="#">Existing Inventory</a></li>
-            <li> <a href="#">Existing Inventory</a></li>
           </BurgerNav>
         </RightMenu>
       </Container>
@@ -108,14 +109,14 @@ const BurgerNav = styled.div`
   flex-direction: column;
   text-align: start;
   transform: ${props => props.show ? 'translateAxis(0)':'translateX(100%)'};
-  transition: transform 0.2s;
+  transition: transform 0.3s;
   li {
     padding: 15px 0;
     border-bottom: 1px solid rgb(115, 115, 115);
 
-    a {
-      font-weight: 600;
-    }
+    // a {
+    //   font-weight: 600;
+    // }
   }
 `;
 
